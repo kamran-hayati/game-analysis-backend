@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "degrees",
+  "info": {
+    "singularName": "degree",
+    "pluralName": "degrees",
+    "displayName": "Degree"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "level": {
+      "type": "enumeration",
+      "enum": [
+        "pre_school",
+        "elementary",
+        "mid_school",
+        "high_school",
+        "college",
+        "university",
+        "graduate",
+        "postgraduate"
+      ]
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "degree_type": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::degree-type.degree-type",
+      "mappedBy": "degree"
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "degree_types",
+  "info": {
+    "singularName": "degree-type",
+    "pluralName": "degree-types",
+    "displayName": "Degree Type"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "dtype": {
+      "type": "enumeration",
+      "enum": [
+        "std_elementary",
+        "grad_elementary",
+        "std_mid_school",
+        "grad_mid_school",
+        "std_high_school",
+        "grad_high_school",
+        "std_college",
+        "grad_college",
+        "std_bachelor_ba",
+        "std_bachellor_bsc",
+        "ba",
+        "bsc",
+        "std_ma",
+        "std_msc",
+        "grad_ma",
+        "grad_msc",
+        "med_school_nursery",
+        "med_school_doctoral",
+        "med_school_vet",
+        "med_school_general",
+        "doctor",
+        "nurse",
+        "grad_med_school_general",
+        "vet",
+        "std_phd",
+        "phd",
+        "std_postdoc",
+        "postdoc"
+      ]
+    },
+    "degree_details": {
+      "type": "json"
+    },
+    "degree": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::degree.degree",
+      "inversedBy": "degree_type"
+    },
+    "description": {
+      "type": "blocks"
+    }
+  }
+}

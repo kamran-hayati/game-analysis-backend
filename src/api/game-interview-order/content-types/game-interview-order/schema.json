@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "game_interview_orders",
+  "info": {
+    "singularName": "game-interview-order",
+    "pluralName": "game-interview-orders",
+    "displayName": "Game Interview Order"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "game": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::game.game"
+    },
+    "interview": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::interview.interview"
+    },
+    "game_order": {
+      "type": "integer",
+      "min": 1,
+      "max": 7
+    }
+  }
+}

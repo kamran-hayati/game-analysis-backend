@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tags",
+  "info": {
+    "singularName": "tag",
+    "pluralName": "tags",
+    "displayName": "Tag"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "polarized_scores": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::polarized-score.polarized-score",
+      "mappedBy": "tags"
+    }
+  }
+}

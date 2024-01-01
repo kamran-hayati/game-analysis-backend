@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "game_scores",
+  "info": {
+    "singularName": "game-score",
+    "pluralName": "game-scores",
+    "displayName": "Game Score",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "score": {
+      "type": "integer",
+      "min": 1,
+      "max": 7
+    },
+    "polarized_score": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::polarized-score.polarized-score",
+      "inversedBy": "game_scores"
+    },
+    "game_interview_order": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::game-interview-order.game-interview-order"
+    },
+    "description": {
+      "type": "blocks"
+    }
+  }
+}

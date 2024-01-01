@@ -1,0 +1,100 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_demographies",
+  "info": {
+    "singularName": "user-demography",
+    "pluralName": "user-demographies",
+    "displayName": "User Demography"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "first_name": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "last_name": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "gender": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "Ma",
+        "Fe",
+        "Tr",
+        "Bi",
+        "N/A"
+      ]
+    },
+    "age": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "integer",
+      "min": 12,
+      "max": 100
+    },
+    "phone": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "integer",
+      "min": 10000,
+      "max": 9999999999
+    },
+    "phone_prefix": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "integer",
+      "min": 0,
+      "max": 999
+    },
+    "phone_details": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "json"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "user_demography"
+    },
+    "job_titles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::job-title.job-title",
+      "mappedBy": "user_demography"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "job_titles",
+  "info": {
+    "singularName": "job-title",
+    "pluralName": "job-titles",
+    "displayName": "Job Title"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "salary": {
+      "type": "decimal"
+    },
+    "user_demography": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::user-demography.user-demography",
+      "inversedBy": "job_titles"
+    },
+    "job_type": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::job-type.job-type",
+      "mappedBy": "job_title"
+    }
+  }
+}

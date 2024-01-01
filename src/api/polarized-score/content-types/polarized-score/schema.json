@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "polarized_scores",
+  "info": {
+    "singularName": "polarized-score",
+    "pluralName": "polarized-scores",
+    "displayName": "Polarized Score",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "left_pole": {
+      "type": "string"
+    },
+    "right_pole": {
+      "type": "string"
+    },
+    "interview": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::interview.interview",
+      "inversedBy": "polarized_scores"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "inversedBy": "polarized_scores"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "game_scores": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::game-score.game-score",
+      "mappedBy": "polarized_score"
+    }
+  }
+}
