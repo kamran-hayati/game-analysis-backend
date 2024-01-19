@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-01-15T23:17:18.301Z"
+    "x-generation-date": "2024-01-19T19:41:07.788Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -25,7 +25,7 @@
   },
   "servers": [
     {
-      "url": "http://localhost:1337/api",
+      "url": "http://0.0.0.0:1337/api",
       "description": "Development server"
     }
   ],
@@ -3835,7 +3835,9 @@
                                                 "type": "integer"
                                               },
                                               "phone": {
-                                                "type": "integer"
+                                                "type": "string",
+                                                "pattern": "^\\d*$",
+                                                "example": "123456789"
                                               },
                                               "phone_prefix": {
                                                 "type": "integer"
@@ -5760,7 +5762,9 @@
                                                             "type": "integer"
                                                           },
                                                           "phone": {
-                                                            "type": "integer"
+                                                            "type": "string",
+                                                            "pattern": "^\\d*$",
+                                                            "example": "123456789"
                                                           },
                                                           "phone_prefix": {
                                                             "type": "integer"
@@ -9638,7 +9642,9 @@
                                     "type": "integer"
                                   },
                                   "phone": {
-                                    "type": "integer"
+                                    "type": "string",
+                                    "pattern": "^\\d*$",
+                                    "example": "123456789"
                                   },
                                   "phone_prefix": {
                                     "type": "integer"
@@ -10196,7 +10202,9 @@
                         "type": "integer"
                       },
                       "phone": {
-                        "type": "integer"
+                        "type": "string",
+                        "pattern": "^\\d*$",
+                        "example": "123456789"
                       },
                       "phone_prefix": {
                         "type": "integer"
@@ -12427,7 +12435,9 @@
                                     "type": "integer"
                                   },
                                   "phone": {
-                                    "type": "integer"
+                                    "type": "string",
+                                    "pattern": "^\\d*$",
+                                    "example": "123456789"
                                   },
                                   "phone_prefix": {
                                     "type": "integer"
@@ -15572,7 +15582,9 @@
                                                 "type": "integer"
                                               },
                                               "phone": {
-                                                "type": "integer"
+                                                "type": "string",
+                                                "pattern": "^\\d*$",
+                                                "example": "123456789"
                                               },
                                               "phone_prefix": {
                                                 "type": "integer"
@@ -17816,7 +17828,9 @@
                                                               "type": "integer"
                                                             },
                                                             "phone": {
-                                                              "type": "integer"
+                                                              "type": "string",
+                                                              "pattern": "^\\d*$",
+                                                              "example": "123456789"
                                                             },
                                                             "phone_prefix": {
                                                               "type": "integer"
@@ -20723,7 +20737,9 @@
                                       "type": "integer"
                                     },
                                     "phone": {
-                                      "type": "integer"
+                                      "type": "string",
+                                      "pattern": "^\\d*$",
+                                      "example": "123456789"
                                     },
                                     "phone_prefix": {
                                       "type": "integer"
@@ -21282,7 +21298,9 @@
             "type": "integer"
           },
           "phone": {
-            "type": "integer"
+            "type": "string",
+            "pattern": "^\\d*$",
+            "example": "123456789"
           },
           "phone_prefix": {
             "type": "integer"
@@ -21347,7 +21365,9 @@
                 "type": "integer"
               },
               "phone": {
-                "type": "integer"
+                "type": "string",
+                "pattern": "^\\d*$",
+                "example": "123456789"
               },
               "phone_prefix": {
                 "type": "integer"
@@ -21522,7 +21542,9 @@
             "type": "integer"
           },
           "phone": {
-            "type": "integer"
+            "type": "string",
+            "pattern": "^\\d*$",
+            "example": "123456789"
           },
           "phone_prefix": {
             "type": "integer"
@@ -23238,7 +23260,9 @@
                                     "type": "integer"
                                   },
                                   "phone": {
-                                    "type": "integer"
+                                    "type": "string",
+                                    "pattern": "^\\d*$",
+                                    "example": "123456789"
                                   },
                                   "phone_prefix": {
                                     "type": "integer"
@@ -23629,7 +23653,7 @@
               "data": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/UserDemography"
+                  "$ref": "#/components/schemas/UserDemographyListResponseDataItemLocalized"
                 }
               }
             }
