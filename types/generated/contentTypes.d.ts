@@ -1296,6 +1296,7 @@ export interface ApiUserDemographyUserDemography extends Schema.CollectionType {
     singularName: 'user-demography';
     pluralName: 'user-demographies';
     displayName: 'User Demography';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1334,15 +1335,11 @@ export interface ApiUserDemographyUserDemography extends Schema.CollectionType {
         min: 12;
         max: 100;
       }>;
-    phone: Attribute.Integer &
+    phone: Attribute.BigInteger &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
         };
-      }> &
-      Attribute.SetMinMax<{
-        min: 10000;
-        max: 9999999999;
       }>;
     phone_prefix: Attribute.Integer &
       Attribute.SetPluginOptions<{

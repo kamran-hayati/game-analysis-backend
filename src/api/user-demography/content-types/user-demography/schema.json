@@ -4,7 +4,8 @@
   "info": {
     "singularName": "user-demography",
     "pluralName": "user-demographies",
-    "displayName": "User Demography"
+    "displayName": "User Demography",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -62,9 +63,7 @@
           "localized": false
         }
       },
-      "type": "integer",
-      "min": 10000,
-      "max": 9999999999
+      "type": "biginteger"
     },
     "phone_prefix": {
       "pluginOptions": {
